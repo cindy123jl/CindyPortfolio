@@ -231,27 +231,7 @@ of the page upon page load*/
 /***END OF VIDEO STYLING***/
 /*** TITLE STYLING ***/
 
-.console-container {
-    max-width: 1500px;
-    padding-top: 8%;
-    font-family:'Courier New', Courier, monospace;
-    font-size:25px;
-    text-align:center;
-    height:200px;
-    width: 120vw;
-    display:block;
-    position:relative;
-    color:white;
-    margin:auto;
-  }
-  .console-underscore {
-    text-align: center;
-    display:inline-block;
-    position:relative;
-    top:-0.14em;
-    left:10px;
-  }
-  
+
 /***** END TITLE STYLE ***/  
 /****CARDS STYLING******/
 /* Design */
@@ -265,6 +245,7 @@ of the page upon page load*/
   box-sizing: border-box;
 }
 img {
+    cursor: pointer;
     height: auto;
     max-width: 100%;
     vertical-align: middle;
@@ -344,6 +325,56 @@ img {
     font-weight: 400;
   }
   /***END CARD STYLING****/
+
+/***CONTACT STYLING****/
+.buttonStyle{
+    text-align: center;
+    padding-bottom: 15%;
+}
+.contactButton{
+  align-items: center;
+  appearance: none;
+  background-image: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Courier New', Courier, monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.contactButton:focus {
+  box-shadow: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%) 0 -3px 0 inset;
+}
+
+.contactButton:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #cf7c88 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.contactButton:active {
+  box-shadow: #EF8D9C 0 3px 7px inset;
+  transform: translateY(2px);
+}
 
 /***FOOTER element ****/
 footer{
