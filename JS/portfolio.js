@@ -1,38 +1,52 @@
-// These functions open and close the contact form
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-}
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-}
+// function([string1, string2],target id,[color1,color2])    
+ consoleText(['Cindy\'s Portfolio', 'Web Developer', 'Designer'], 'text',['#EF8D9C','Mistyrose','White']);
 
-// This function displays the first image in the slideshow when the page loads
-var slideIndex = 1;
-showSlides(slideIndex);
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
 
-// This function changes the slide when the left or right arrows are clicked
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// This function changes the slide when the dots are clicked
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-
-function showSlides(n) {
-    var slides = document.getElementsByClassName("mySlides"); // This takes all elements with the class name "mySlides" and stores them in the variable array "slides"
-    var dots = document.getElementsByClassName("dot"); // This takes all elements with the class name "dot" and stores them in the variable array "dots"
-    if (n > slides.length) {slideIndex = 1}; // If n (the number passed into the function) is greater than the length of the array "slides", the slideIndex is set to 1
-    if (n < 1) {slideIndex = slides.length}; // If n (the number passed into the function) is less than 1, te slideIndex is set to the length of the array "slides"
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; // This for loop takes each item in the array "slides" and sets the display to none
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", ""); // This for loop takes each item in the array "dots" and removes "active" which removes the active styling
+  }, 200)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
     }
-    slides[slideIndex - 1].style.display = "block"; // This displays the image in the slideshow
-    dots[slideIndex - 1].className += " active"; // This adds the active styling to the dot associated with the image
+  }, 400)
 }
