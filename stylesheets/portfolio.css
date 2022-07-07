@@ -21,6 +21,23 @@ body.fade-out{
     opacity: .1;/*This sets the level of opacity at the start of page load*/
     transition: none;
 }
+/* CSS FOR LIGHT AND DARK MODE */
+:root{
+    --primary-color: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    --secondary-color: #fff;
+    --tertiary-color: #EAE1DF;
+}
+
+.dark-theme{
+    --primary-color: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    --secondary-color: grey;
+    --tertiary-color: linear-gradient(315deg, #2d3436 0%, #000000c7 74%);
+}
+
+
+
+
+
 
 /* The animation effect for moving the nav bar in from above the top of the screen upon page load */
 @keyframes moveNav {
@@ -62,7 +79,7 @@ h2:hover{
 /*STYLING FOR PORTFOLIO TITLE TEXT*/
 
 .white-text{
-    color: #fff; /*This is used to change the color of the portfolio title text*/
+    color: var(--secondary-color); /*This is used to change the color of the portfolio title text*/
 }
 
 /*PARAGRAPH ELEMENTS*/
@@ -80,7 +97,7 @@ p{
 h1{
     text-align: center;
     font-size: 10vw;
-    color: white;
+    color: var(--secondary-color);
     padding-top: 7%;
     margin-top: 120vw;
 }
@@ -106,14 +123,14 @@ vertically in the column*/
 footer{
     padding:2%;/*this gives the footer padding that is equal to 2%
                 of the width of the element's area*/
-    background-color: #EAE1DF;
+    background-color: var(--tertiary-color);
 }
 
 /***END OF GENERAL STYLING***/
 .Navbar{
     overflow: hidden; /*this ensures that any content that overflows beyond
                         the bondary of the navbar is not displayes*/
-    background-color:#EAE1DF;/*This colors the navbar*/
+    background-color: var(--tertiary-color);/*This colors the navbar*/
     position: fixed; /*This keeps the navbar at the top of the screen as we 
                         scroll*/
     top: 0; /*this ensure no space is displayed above the navbar*/
@@ -186,6 +203,14 @@ navbar*/
         transform: scale(1,1);
     }
 }
+
+
+#icon{
+    width: 2vw;
+    cursor: pointer;
+    float: right;
+}
+
 /***END OF NAVBAR STYLING***/
 
 /***VIDEO STYLING***/
@@ -207,7 +232,7 @@ navbar*/
 #Video_Text{
     background: rgba(0,0,0,0.5); /*this provides a semi-transparent background
                                     for the text to sit over*/
-    color:white; /*makes the font color white*/
+    color:var(--secondary-color); /*makes the font color white*/
     width:100%;/*ensures the video-text container fills the width of the video*/
     height: 100vh;/*ensures the video-text container filles the height of the viewport*/
     padding-top: 2vh;/*adds paddingt, background goes slightly beyond text*/
@@ -252,7 +277,7 @@ img {
   }
   
   .btn {
-    color: #ffffff;
+    color: var(--secondary-color);
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
@@ -295,7 +320,7 @@ img {
   }
   
   .card {
-    background-color: white;
+    background-color: var(--secondary-color);
     border-radius: 0.25rem;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -305,11 +330,11 @@ img {
   
   .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+    background: var(--primary-color);
   }
   
   .card_title {
-    color: #ffffff;
+    color: var(--secondary-color);
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -318,7 +343,7 @@ img {
   }
   
   .card_text {
-    color: #ffffff;
+    color: var(--secondary-color);
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;    
@@ -334,12 +359,12 @@ img {
 .contactButton{
   align-items: center;
   appearance: none;
-  background-image: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  background-image: var(--primary-color);
   border: 0;
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--secondary-color);
   cursor: pointer;
   display: inline-flex;
   font-family: 'Courier New', Courier, monospace;
@@ -363,7 +388,7 @@ img {
 }
 
 .contactButton:focus {
-  box-shadow: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%) 0 -3px 0 inset;
+  box-shadow: var(--primary-color);
 }
 
 .contactButton:hover {
@@ -376,10 +401,10 @@ img {
   transform: translateY(2px);
 }
 
+
 /***FOOTER element ****/
 footer{
-    padding: 2%;
-    background-color: #fddbd4;
-    
+    padding: 1%;
+    background-color: var(--third-color);   
 }
 
