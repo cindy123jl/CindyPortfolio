@@ -31,13 +31,8 @@ body.fade-out{
 .dark-theme{
     --primary-color: linear-gradient(315deg, #2d3436 0%, #000000 74%);
     --secondary-color: grey;
-    --tertiary-color: linear-gradient(315deg, #2d3436 0%, #000000c7 74%);
+    --tertiary-color: black;
 }
-
-
-
-
-
 
 /* The animation effect for moving the nav bar in from above the top of the screen upon page load */
 @keyframes moveNav {
@@ -58,6 +53,14 @@ body.fade-out{
     to {top: 0px;}
   }
 
+
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
 
 /* HEADING 2 ELEMENTS */
 h2{
