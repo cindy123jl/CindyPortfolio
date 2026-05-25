@@ -11,7 +11,7 @@ body{
     opacity: 1;/*This adds a transition affect the page loading fade in effect*/
     transition: 3s opacity;/*this causes a 3 second fade in*/
     letter-spacing: .1vw;/*vw is a relative measurement*/
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Verdana, sans-serif;
     font-size: 1.0vw;
     overflow-x: hidden;/*this prevens the horizontal scroll bar from appearin when the quote is hovered*/
     user-select: none;/*This prevents the text on the webpage from being highlighted by user*/
@@ -23,9 +23,9 @@ body.fade-out{
 }
 /* CSS FOR LIGHT AND DARK MODE */
 :root{
-    --primary-color: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
-    --secondary-color: #fff;
-    --tertiary-color: #EAE1DF;
+    --primary-color: linear-gradient(to bottom left, #8dbbef 40%, #5998f7 100%);
+    --secondary-color: #ffffffa9;
+    --tertiary-color: #eadfe3;
 }
 
 .dark-theme{
@@ -65,7 +65,7 @@ body.fade-out{
 /* HEADING 2 ELEMENTS */
 h2{
     text-transform: uppercase; /*Capitalises all h1 headings */
-    font-family: 'Courier New', Courier, monospace; /*sets the fonts family of all h1 headings*/
+    font-family: Verdana, sans-serif; /*sets the fonts family of all h1 headings*/
     text-align: center; /*centering all h1 elements*/
     margin-top: 3%; /* adds a small margin above h1 elements*/
     color: #1a1a1a;
@@ -87,12 +87,8 @@ h2:hover{
 
 /*PARAGRAPH ELEMENTS*/
 p{
-    font-family: 'Courier New', Courier, monospace, Rockwell Extra Bold;
+    font-family: Verdana, sans-serif;
     text-align: justify; /*justify text within paragraph elements*/
-    letter-spacing: .1vw; /*This expands the text slightly*/
-    font-size: 1.5vw;
-    padding-left: 1vw; /*adds padding to the left of the paragraph element*/
-    padding-right: 1vw; /*adds padding to the right of the paragraph element*/
     color: black;
     
 }
@@ -130,7 +126,7 @@ footer{
 }
 
 /***END OF GENERAL STYLING***/
-.Navbar{
+.navbar{
     overflow: hidden; /*this ensures that any content that overflows beyond
                         the bondary of the navbar is not displayes*/
     background-color: var(--tertiary-color);/*This colors the navbar*/
@@ -139,9 +135,6 @@ footer{
     top: 0; /*this ensure no space is displayed above the navbar*/
     width: 100%; /*this makes the navbar span the entire width of the page*/
     z-index: 1;/*this ensure other elemetns don't display over the navbar*/
-    -webkit-animation: moveNav 5s; /*this applies that movNav animation below 
-                                    for safari 4.0-8.0*/
-    animation:moveNav 5s;/*this applies the moveNav animation for all other browsers*/
 }
 
 /*moveNave animation efftec for moving the nav bar in from the left of the screen*/
@@ -151,21 +144,31 @@ footer{
 }
 
 /*Navbar links*/
-.Navbar a{
+.navbar a{
     float:left; /*This specifies that the text floats on the left on the navbar*/
     display:block; /*this ensures that other text will be displayed on the same line
                     or row, instead of a new line*/
     color: #917c78;/*font color for text on the navbar*/
-    padding: .75vw 1vw;/*this adds padding around our text*/
+    
     text-decoration: none;/*this gets rid of the underlines under the text on our navbar*/
-    font-family: Avant Garde, Helvetica; /*this specifies the font family for text on 
+    font-family: Verdana, sans-serif; /*this specifies the font family for text on 
                                             our navbar*/
     font-size: 1.5vw;/*this specifies the font size for the text on our navbar*/
     text-align: center;/*this centers the text within its container*/
-    position:relative;/*this sets the text relative to its normal positioning
-                        allowing us to use the animation below*/
-    -webkit-animation: moveNavText 5.75s;/*animation for safari 4.0-8.0*/
-    animation: moveNavText 5.75s; /*applies the moveNavText animation for 5.75s*/
+    
+
+}
+
+.me-image {
+  margin-left: 0;
+  width: 200px;
+  height: 200px; /* Different width and height create the oval */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image doesn't look stretched */
+}
+
+.intro-section{
+  margin-top: 5%;
 }
 
 /*moveNavText animation effect for moving the navbar text from above the view to the 
@@ -177,14 +180,14 @@ navbar*/
 
 /* screens 567px and smaller will display navbar links equally distributed*/
 @media screen and (max-width: 576px){
-    .Navbar a{
+    .navbar a{
         width: 25%;/*this makes each link take us 1/4 of the navbar */
         font-size:12px;
     }
 }
 
 /*NAVBAR HOVER EFFECTS*/
-.Navbar a:hover{
+.navbar a:hover{
     background-color:#f4f4f4;/*defined the background color that will display
                                 when you hover over a link*/
     color:#B79492;/*the font color that will display when navbar a elements
@@ -194,7 +197,7 @@ navbar*/
 }
 
 /*NAVBAR HOME BUTTON*/
-.Navbar a.active{/*this targets the a element on the navbar with the "active"class*/
+.navbar a.active{/*this targets the a element on the navbar with the "active"class*/
     background-color: #F7F3F3;
 }
 
@@ -340,16 +343,15 @@ img {
     color: var(--secondary-color);
     font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: capitalize;
+   
+    
     margin: 0px;
   }
   
   .card_text {
     color: var(--secondary-color);
     font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;    
+     
     font-weight: 400;
   }
   /***END CARD STYLING****/
@@ -370,7 +372,7 @@ img {
   color: var(--secondary-color);
   cursor: pointer;
   display: inline-flex;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Verdana, sans-serif;
   height: 48px;
   justify-content: center;
   line-height: 1;
