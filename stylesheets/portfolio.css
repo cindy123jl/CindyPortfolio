@@ -93,13 +93,6 @@ p{
     
 }
 
-h1{
-    text-align: center;
-    font-size: 10vw;
-    color: var(--secondary-color);
-    padding-top: 7%;
-    margin-top: 120vw;
-}
 
 /*PARAGRAPH ELEMENT HOVER EFFECT*/
 p:hover{
@@ -174,6 +167,16 @@ footer{
   height: 200px; /* Different width and height create the oval */
   
   object-fit: cover; /* Ensures the image doesn't look stretched */
+}
+.projects-title{
+    text-align: left;
+    
+   
+}
+
+.more-about-me{
+    text-align: center;
+    font-family: Verdana, sans-serif;
 }
 
 .intro-section{
@@ -303,13 +306,7 @@ img {
       
     }
   }
-  
- 
-  
-  
-  
- 
-  
+    
   
   /***END CARD STYLING****/
 
