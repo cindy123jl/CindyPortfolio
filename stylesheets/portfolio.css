@@ -183,6 +183,15 @@ footer{
   margin-top: 5%;
 }
 
+
+.project-section{
+    margin-top: 3%;
+}
+
+.about-me-section{
+    margin-top: 3%;
+}
+
 /*moveNavText animation effect for moving the navbar text from above the view to the 
 navbar*/
 @keyframes moveNavText{
