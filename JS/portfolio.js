@@ -7,7 +7,7 @@ icon.onclick = function(){
         typing.src ="./img/video/darkvideo.mp4";
     }
     else{
-        icon.src = "./img/moonmode.png";
+        icon.src = "./img/moon.png";
         typing.src ="./img/video/pinkvideo.mp4";
     }
 }
