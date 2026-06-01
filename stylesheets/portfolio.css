@@ -89,17 +89,13 @@ h2:hover{
 p{
     font-family: Verdana, sans-serif;
    
-    color: black;
+    color: #0a404b;
     
 }
 
 
-/*PARAGRAPH ELEMENT HOVER EFFECT*/
-p:hover{
-    transition: transform 1s; /*This make the transform effect last 1 second*/
-    transform: scale(1.01); /*This makes the paragraphs increase slightly in size when 
-                              hovered over*/
-}
+
+
 
 /*CENTER CLASS - THIS APPLIES TO ALL ELEMENTS WITH THE CLASS "CENTER"*/
 .center{
@@ -157,31 +153,53 @@ footer{
   width: 200px;
   height: 200px; /* Different width and height create the oval */
   border-radius: 50%;
+  border: 2px solid #0a404b;
   object-fit: cover; /* Ensures the image doesn't look stretched */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.my-name{
+    color: #0a404b;
+    font-weight: 600;
+    font-size: 20px !important;
+    letter-spacing: 1px;
 }
 
 .job-title{
-    color: #42bfdd;
+    color: #0e2b31;
+    letter-spacing: 1px;
+    font-size: 36px;
+    font-weight: 600;
     font-family: Verdana, sans-serif;
 }
 
 
 
 .about-me-image{
-  
+  border-radius: 8%;
   margin-right: auto;
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   object-fit: cover; /* Ensures the image doesn't look stretched */
 }
+
+.col-md-6{
+    width: 15% !important;
+}
+
 .projects-title{
     text-align: left;
-    color: #42bfdd;
+    color: #0a404b;
+    font-weight: 600;
     font-size: 36px !important;
+    letter-spacing: 1px;
     font-family: Verdana, sans-serif;
 }
 
 .more-about-me{
     text-align: center;
+    color: #0e2b31;
+    letter-spacing: 1px;
+    font-size: 36px;
+    font-weight: 600;
     font-family: Verdana, sans-serif;
 }
 
@@ -198,37 +216,62 @@ footer{
     margin-top: 3%;
 }
 
-.text-bg-info{
-    font-family: Verdana, sans-serif;
-    font-size: 36px;
-}
+
 
 .badge-container{
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
+.badge-focus{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: verdana, sans-serif;
+    color: #0a404b;
+}
+
+.badge-style{
+    background-color: #0a404b;;
+    color: #fff;
+   
+}
+
 .card-text{
     font-family: Verdana, sans-serif !important;
+    letter-spacing: 1px;
 }
 
 .col .card{
-    border-style: dashed;
+    
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card-style{
     background-color: #fff;
 }
 
+/* .card-body-style{
+    border-bottom: 3px solid #bbe6e4;
+} */
+
 .card-title-style{
-    color: #42bfdd !important;
+    color: #0e2b31 !important;
     font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 550;
+    letter-spacing: 1px;
     font-family: Verdana, sans-serif;
 }
 
 .card-style .card-btn{
-    background-color: #ff66b3;
-    color: #ffff;
+    background-color: #42bfdd;
+    border: 1px solid #ff66b3;
+    color: #fff;
     font-family: Verdana, sans-serif;
     width: 100px;
     font-size: 12px;
@@ -236,7 +279,8 @@ footer{
 }
 
 .card-style .card-btn:hover{
-    background-color: #42bfdd;
+    background-color: #bbe6e4;
+    border: 1px solid #42bfdd;
     color: #fff;
 }
 
