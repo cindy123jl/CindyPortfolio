@@ -5,17 +5,14 @@
 html{
     scroll-behavior: smooth;/*This ensures that the page scrolling is smooth when the buttons on the nav bar is clicked*/
 }
-/* BODY */
 body{
     margin: 0%;/*This is to ensure our site displays all the way to the edge of the browser screem*/
     opacity: 1;/*This adds a transition affect the page loading fade in effect*/
-    transition: 3s opacity;/*this causes a 3 second fade in*/
-   
     font-family: Verdana, sans-serif;
-    font-size: 1.0vw;
     overflow-x: hidden;/*this prevens the horizontal scroll bar from appearin when the quote is hovered*/
     user-select: none;/*This prevents the text on the webpage from being highlighted by user*/
 }
+
 /*THIS SECTION CONTRIBUTES TO THE FASE EFFECT FOR THE PAGE THAT OCCURS WHEN THE PAGE IS LOADED*/
 body.fade-out{
     opacity: .1;/*This sets the level of opacity at the start of page load*/
@@ -23,16 +20,17 @@ body.fade-out{
 }
 /* CSS FOR LIGHT AND DARK MODE */
 :root{
-    --primary-color: linear-gradient(to bottom left, #8dbbef 40%, #5998f7 100%);
-    --secondary-color: #ffffffa9;
+    --primary-color: #fff;
+    --secondary-color: #0a404b;
     --tertiary-color: #eadfe3;
 }
 
 .dark-theme{
-    --primary-color: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-    --secondary-color: grey;
+    --primary-color: #000;
+    --secondary-color: #fff;
     --tertiary-color: black;
 }
+/* BODY */
 
 /* The animation effect for moving the nav bar in from above the top of the screen upon page load */
 @keyframes moveNav {
@@ -68,7 +66,7 @@ h2{
     font-family: Verdana, sans-serif; /*sets the fonts family of all h1 headings*/
     text-align: center; /*centering all h1 elements*/
     margin-top: 3%; /* adds a small margin above h1 elements*/
-    color: #1a1a1a;
+    color: var(--secondary-color);
     
 }
 
@@ -88,13 +86,15 @@ h2:hover{
 /*PARAGRAPH ELEMENTS*/
 p{
     font-family: Verdana, sans-serif;
-   
-    color: #0a404b;
+   letter-spacing: 1px;
+    color: var(--secondary-color);
     
 }
 
 
-
+.darkmode-background{
+    background-color: var(--primary-color);
+}
 
 
 /*CENTER CLASS - THIS APPLIES TO ALL ELEMENTS WITH THE CLASS "CENTER"*/
@@ -158,14 +158,14 @@ footer{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .my-name{
-    color: #0a404b;
+    color: var(--secondary-color);
     font-weight: 600;
     font-size: 20px !important;
     letter-spacing: 1px;
 }
 
 .job-title{
-    color: #0e2b31;
+    color: var(--secondary-color);
     letter-spacing: 1px;
     font-size: 36px;
     font-weight: 600;
@@ -183,11 +183,12 @@ footer{
 
 .col-md-6{
     width: 15% !important;
+    
 }
 
 .projects-title{
     text-align: left;
-    color: #0a404b;
+    color: var(--secondary-color);;
     font-weight: 600;
     font-size: 36px !important;
     letter-spacing: 1px;
@@ -195,8 +196,9 @@ footer{
 }
 
 .more-about-me{
+    margin-bottom: 2%;
     text-align: center;
-    color: #0e2b31;
+   color: var(--secondary-color);
     letter-spacing: 1px;
     font-size: 36px;
     font-weight: 600;
@@ -204,15 +206,18 @@ footer{
 }
 
 .intro-section{
+
   margin-top: 5%;
 }
 
 
 .project-section{
+    
     margin-top: 3%;
 }
 
 .about-me-section{
+    
     margin-top: 3%;
 }
 
@@ -230,11 +235,11 @@ footer{
     font-size: 20px;
     letter-spacing: 1px;
     font-family: verdana, sans-serif;
-    color: #0a404b;
+    color: var(--secondary-color);
 }
 
 .badge-style{
-    background-color: #0a404b;;
+    background-color: #0a404b;
     color: #fff;
    
 }
@@ -251,7 +256,7 @@ footer{
 }
 
 .card-style{
-    background-color: #fff;
+    background-color: var(--primary-color);
 }
 
 /* .card-body-style{
@@ -259,7 +264,7 @@ footer{
 } */
 
 .card-title-style{
-    color: #0e2b31 !important;
+    color: var(--secondary-color) !important;
     font-size: 18px;
     text-decoration: underline;
     cursor: pointer;
