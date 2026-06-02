@@ -70,12 +70,8 @@ h2{
     
 }
 
-/*HEADING 2 ELEMENT HOVER EFFECT */
-h2:hover{
-    filter:grayscale(5%); /*adds a slightly gray filter to the h1  heading when hovered over*/
-    transform: scale(1.1); /*When the h1 elements are hovered over they increase in size by 1.1*/
-    transition: transform 1s; /*This causes the transformation to last 1 second*/
-}
+
+
 
 /*STYLING FOR PORTFOLIO TITLE TEXT*/
 
@@ -179,6 +175,17 @@ footer{
   margin-right: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   object-fit: cover; /* Ensures the image doesn't look stretched */
+ 
+}
+
+.container .row-responsive{
+    display: flex;
+}
+
+.row .col-style{
+        margin-bottom: unset;
+        width: 33%;
+        margin-top: 1%;
 }
 
 .col-md-6{
@@ -225,7 +232,7 @@ footer{
 
 .badge-container{
     font-family: Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 1px;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -255,6 +262,8 @@ footer{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+
 .card-style{
     background-color: var(--primary-color);
 }
@@ -273,20 +282,12 @@ footer{
     font-family: Verdana, sans-serif;
 }
 
-.card-style .card-btn{
-    background-color: #42bfdd;
-    border: 1px solid #ff66b3;
-    color: #fff;
-    font-family: Verdana, sans-serif;
-    width: 100px;
-    font-size: 12px;
-    height: 30px;
-}
 
-.card-style .card-btn:hover{
-    background-color: #bbe6e4;
-    border: 1px solid #42bfdd;
-    color: #fff;
+
+#icon{
+    width: 40px;
+    cursor: pointer;
+    float: right;
 }
 
 /*moveNavText animation effect for moving the navbar text from above the view to the 
@@ -297,11 +298,56 @@ navbar*/
 }
 
 /* screens 567px and smaller will display navbar links equally distributed*/
-@media screen and (max-width: 576px){
+@media screen and (max-width: 826px){
     .navbar a{
         width: 25%;/*this makes each link take us 1/4 of the navbar */
         font-size:12px;
     }
+    .container .row-responsive{
+    display: block;
+    }
+
+    .row .col-style{
+        margin-bottom: 3%;
+        width: 100%;
+        margin-top: 1%;
+    }
+    .col-md-6{
+    width: 50% !important;
+    
+    }
+    .about-me-mobile {
+       text-align: center;
+    }
+
+    .job-title {
+        font-size: 24px;
+    }
+
+    .projects-title {
+        font-size: 24px !important;
+    }
+
+    .more-about-me {
+        font-size: 24px;
+    }
+
+    .badge-container {
+        font-size: 13px;
+    }
+
+    #icon{
+    width: 25px;
+    }
+   
+}
+
+
+@media screen and (max-width: 826px) and (min-width: 786px) {
+    .row .col-style{
+        width: 50%;
+    }
+    
 }
 
 /*NAVBAR HOVER EFFECTS*/
@@ -327,53 +373,11 @@ navbar*/
 }
 
 
-#icon{
-    width: 2vw;
-    cursor: pointer;
-    float: right;
-}
-
-/***END OF NAVBAR STYLING***/
-
-/***VIDEO STYLING***/
-/*formating for background video*/
-#typing{
-    position:fixed;/*fixes video to page*/
-    right:0;/*ensures no spacing between the edge of the video*/
-    bottom:0;/*ensures no spacing betweeen the bottom of vid and page*/
-    min-width: 100%;/*displays across the full width of page*/
-    z-index: -1;/*places the video behind the other elements*/
-    animation: zoominoutsinglefeatured 5s;
-}
-/*screens that are 576 px and smaller will not display the background*/
-@media screen and (max-width:576px){
-#typing{
-    display:block;
- }
-}
-
-/*this animation effect causes the overlay video text to move up from the bottom
-of the page upon page load*/
-@keyframes moveVideoText{
-    from{top:-100vw;}/* this sets the postion of the video text to above the viewport*/
-    to{top:0vw;}/*this move the video text to the normal postioning on the viewport*/
-}
-/***END OF VIDEO STYLING***/
-/*** TITLE STYLING ***/
 
 
-/***** END TITLE STYLE ***/  
-/****CARDS STYLING******/
-/* Design */
-.main{
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
+
+
 img {
     cursor: pointer;
     height: auto;
@@ -381,77 +385,7 @@ img {
     vertical-align: middle;
   }
 
- 
-  .card_btn {
-    background-color: #42bfdd;
-    padding: 0.8rem;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    font-weight: 400;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    
-  }
-  
-  .btn:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
-  
 
-  
-  @media (min-width: 40rem) {
-    .cards_item {
-      
-    }
-  }
-  
-  @media (min-width: 56rem) {
-    .cards_item {
-      
-    }
-  }
-    
-  
-  /***END CARD STYLING****/
-
-/***CONTACT STYLING****/
-.buttonStyle{
-    text-align: center;
-    padding-bottom: 15%;
-}
-.contactButton{
-  align-items: center;
-  appearance: none;
-  background-image: var(--primary-color);
-  border: 0;
-  border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: var(--secondary-color);
-  cursor: pointer;
-  display: inline-flex;
-  font-family: Verdana, sans-serif;
-  height: 48px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 18px;
-}
 
 
 /***FOOTER element ****/
