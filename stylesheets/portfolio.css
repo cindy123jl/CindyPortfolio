@@ -2,22 +2,17 @@
 *{
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;/*This ensures that the page scrolling is smooth when the buttons on the nav bar is clicked*/
-}
+
 body{
     margin: 0%;/*This is to ensure our site displays all the way to the edge of the browser screem*/
     opacity: 1;/*This adds a transition affect the page loading fade in effect*/
     font-family: Verdana, sans-serif;
     overflow-x: hidden;/*this prevens the horizontal scroll bar from appearin when the quote is hovered*/
-    user-select: none;/*This prevents the text on the webpage from being highlighted by user*/
+    /* user-select: none;This prevents the text on the webpage from being highlighted by user */
 }
 
 /*THIS SECTION CONTRIBUTES TO THE FASE EFFECT FOR THE PAGE THAT OCCURS WHEN THE PAGE IS LOADED*/
-body.fade-out{
-    opacity: .1;/*This sets the level of opacity at the start of page load*/
-    transition: none;
-}
+
 /* CSS FOR LIGHT AND DARK MODE */
 :root{
     --primary-color: #fff;
